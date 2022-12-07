@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@400;700&family=Source+Sans+Pro:wght@300&family=Titillium+Web:wght@300&display=swap');
+*{
+    font-family:'Abel', sans-serif;
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:hsla(193, 93%, 56%, 0.6);
+}
+
+/* Start Back to top */
+.backtotopbtn{
+    background-color:#000;
+    color:#fff;
+    border-radius:20px;
+    padding:10px;
+
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    z-index:100;
+}
+/* End Back to top */
+
+
+/* Start Header */
+header{
+    height:100vh;
+    background:linear-gradient(30deg,rgba(0,0,0,0.5),transparent,rgba(0,0,0,0.4)),url('./../assets/img/itzy-header.jpg'); 
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  
+}
+
+/* Start navbar */
+nav{
+    position:relative;
+}
+.navbar{
+    background:linear-gradient(180deg,#88BBFF,transparent,rgba(0,0,0,0.5));
+    padding:10px 20px;
+}
+
+.navbar .menuitems{
+    color:#fff;
+}
+
+.navh1{
+    font-size:60px;
+    letter-spacing:1px;
+}
+
+
+
+.navbuttons{
+    background-color:transparent;
+    border:none;
+}
+
+.navbar .signnav{
+    border:none;
+    background-color:var(--primary);
+    color:#fff;
+    padding:10px 20px;
+}
+
+.navbuttons .lines1,.lines2,.lines3{
+    width:34px;
+    height:4px;
+    margin:6px;  
+    background-color:#fff;
+}
+
+.uppernav{
+    width:300px;
+    height:auto;
+    background:linear-gradient(0deg,rgba(0,0,0,0.5),transparent,rgba(0,0,0,0.8));
+    color:#fff;
+    transform:translateY(30px);
+
+    letter-spacing:1px;
+    position:absolute;
+
+    /* z-index:100; */
+}
+
+.uppernav hr{
+    border-width:3px;
+}
+
+#uppernavid li a{
+    transition:letter-spacing .5s;
+}
+
+#uppernavid li a:hover{
+    color:#000;
+    letter-spacing:2.5px;
+}
+
+@media(max-width:700px){
+    
+     header .leaderjyp h1,h3{
+        display:none;
+    }
+    
+    .uppernav li a{
+        padding:0;
+        margin:0;
+    }
+}
+/* End navbar */
+/* End Header */
+
+
+
+/* Start About Us Section */
+.aboutus{
+    width:100%;
+    background:linear-gradient(180deg,#7969c9 25%,rgba(0,0,0,0.8) 40%,#88BBFF 75%,rgba(0,0,0,0.95));
+    
+}
+
+
+.aboutus #ulaboutus .liskew{
+    width:120px;
+    height:45px;
+    background-color:#000;
+    color:#33b5e5;
+    line-height:45px;
+    transform:skew(-10deg);
+    box-shadow:5px 6px 4px 4px #222;
+    cursor:pointer;
+
+    transition:translate 0.5s;
+}
+
+.aboutus #ulaboutus .liskew:hover{
+    transform:skew(-10deg) translateY(-7px);
+}
+
+
+/* .aboutus .artistlists.activelists{
+    width:120px;
+    height:45px;
+    background-color:#88BBFF ;
+    color:#000;
+    line-height:45px;
+    transform:skew(-10deg);
+    box-shadow:5px 6px 4px 4px #222;
+    
+} */
+
+.leftdiv{
+    animation-name:leftani;
+    animation-duration:3s;
+}
+
+.rightdiv{
+    
+    animation-name:rightani;
+    animation-duration:3s;
+}
+
+.rightdivs{
+    color:#0d0e30f6;
+    font-weight:600;
+}
+
+.imgclass{
+    padding:0;
+}
+
+.imgclass img{
+   width:400px;
+    height:400px;
+    object-fit:cover;
+}
+@keyframes leftani{
+    0%{
+        transform:translateX(-150px);
+        opacity:0;
+    }
+    100%{
+        transform:translateX(0px);
+        opacity:1;
+    }
+}
+
+@keyframes rightani{
+    from{
+        transform:translateX(150px);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0px);
+        opacity:1;
+    }
+}
+
+.aboutus .card{
+    width:400px;
+    height:350px;
+    background-color:rgba(0,0,0,0.7);
+    position:relative;
+    overflow:hidden;
+    transition:all 0.5s;
+}
+
+.aboutus .card .cardtitles{
+    background:linear-gradient(transparent,#88BBFF ,rgba(0,0,0,0.5) );
+    color:#000;
+    padding:10px 30px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+
+
+.card img{
+    width:100%;
+    height:100%;
+    padding:20px;
+
+    transition:all 0.5s;
+}
+
+.aboutus .card:hover img{
+    transform:scale(1.2);
+}
+
+.artisth1 h1{
+    color:#000;
+}
+
+.cardtxts{
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translateY(-100px);
+    opacity:0;
+    transition:all 0.3s;
+}
+
+.card:hover .cardtxts{
+    background-color:#000;
+    color:#33b5e5;
+    transform:translateY(200px);
+    opacity:1;
+    z-index:3;
+}
+
+@media(max-width:700px){
+    .aboutus #ulaboutus .liskew{
+        width:90px;
+        margin-bottom:15px;
+        box-shadow:5px 5px 4px 4px #222;
+    }
+}
+
+/* End About Us Section */
+
+/* start members section */
+.members{
+    background:linear-gradient(180deg,rgba(0,0,0,0.9),#88BBFF,rgba(0,0,0,0.99));
+    
+}
+.members .card{
+    width:300px;
+    height:400px;
+    margin:auto;
+    margin-bottom:50px;
+    background:linear-gradient(180deg,rgba(0,0,0,0.8),#88BBFF,rgba(0,0,0,0.8));
+    
+    box-shadow:10px 5px 10px #222;
+    overflow:hidden;
+    transition:all 0.5s;
+}
+
+.members img{
+    width:100%;
+    height:300px;
+    padding:0;
+}
+.members .card-footer{
+    text-align:center;
+}
+
+.members .card:hover{
+    transform:translateY(-10px);
+}
+
+.titleh3{
+    background-color:#88BBFF;
+    display:inline-block;
+    padding:10px 30px;
+    color:#000;
+    position:relative;
+}
+
+.members p{
+    font-size:23px;
+    color:#fff;
+}
+
+.titleh3::before{
+    content:'';
+    width:40px;
+    height:40px;
+    border-top:3px solid #88BBFF;
+    border-left:3px solid #88BBFF;
+    position:absolute;
+    top:-10px;
+    left:-10px;
+
+    transition:all 0.5s;
+}
+
+.titleh3::after{
+    content:'';
+    width:40px;
+    height:40px;
+    border-bottom:3px solid #88BBFF;
+    border-right:3px solid #88BBFF;
+    position:absolute;
+    bottom:-10px;
+    right:-10px;
+
+    transition:all 0.5s;
+
+}
+
+.titleh3:hover::before{
+    left:90%;
+    border-left:none;
+    border-right:3px solid #88BBFF;
+}
+
+.titleh3:hover::after{
+    right:90%;
+    border-right:none;
+    border-left:3px solid #88BBFF;
+}
+/* end members section */
+
+/* Start albums section */
+.albums{
+    background-color:#000;
+}
+.albums .albumcard{
+    width:350px;
+    height:250px;
+    margin:0 auto;
+
+    position:relative;
+}
+.albums img{
+    width:140px;
+
+    position:absolute;
+    top:0;
+    right:17%;
+
+ 
+}
+
+.albums .covers{
+    width:150px;
+
+    position:absolute;
+    top:0%;
+    left:19%;
+
+    z-index:3;
+}
+
+.albums .covers img{
+    width:100%;
+}
+
+.albums .albumcds{
+    transition:all 1s;
+}
+
+.albums .albumcds:hover{
+    transform:translateX(-30%);
+}
+
+.albums .albumtexts{
+    text-align:center;
+    color:#fff;
+    position:absolute;
+    bottom:0;
+}
+
+.albumone{
+    transform:translateY(50px);
+}
+
+.albums .albumbtn{
+    width:500px;
+    height:60px;
+    background-color:#000;
+    color:red;
+    line-height:60px;
+    border:4px solid red;
+  
+
+    position:relative;
+    overflow:hidden;
+}
+
+.albums .albumbtn::before{
+    content:'';
+    width:100%;
+    height:100%;
+
+    background:linear-gradient(
+        45deg,
+        transparent,
+        red,
+        transparent
+    );
+    position:absolute;
+    top:0;
+    left:-100%;
+
+    transition:all 0.5s;
+}
+
+.albums .albumbtn:hover::before{
+    left:100%;
+}
+
+.albums .albumbtn:hover{
+    box-shadow:1px 1px 25px 10px red;
+}
+
+@media(max-width:700){
+    .albums .albumcard{
+        margin:30px auto;
+    }
+    .albumone{
+        transform:translateY(0);
+    }
+    .albumcard .albumtexts{
+        margin:20px;
+    }
+} 
+
+/* End albums section */
+
+/* Start Concert Ticket Section */
+
+.tickets{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(./../assets/img/albums/concert.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.tickets .tickettexts{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.form-control:focus{
+    box-shadow:none;
+}
+
+.tickets .hasDatepicker{
+    color:none;
+    background-color:none;
+    text-decoration:none;
+}
+
+.tickets .order-btns{
+    width:300px;
+    height:45px;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* End Concert Ticket Section */
+
+/* Start Footer Section */
+.footermap{
+    width:100%;
+    background:linear-gradient(30deg,rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url("./../assets/img/jyp-building.jpg");
+    background-position:top;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+
+}
+
+
+
+.leftfooter .outlineno input{
+    border:none;
+    border-bottom:2px solid #000;
+    background-color:transparent;
+
+}
+
+.leftfooter .outlineno input:focus{
+    outline:none;
+    border:none;
+    background-color:transparent;
+    border-bottom:2px solid var(--primary);
+}
+/* End Footer Section */
+
+.footers{
+    background-color: #88BBFF;
+}
+
+.footers .leftfooter li{
+    width:50px;
+    height:50px;
+    background-color:transparent;
+    border:2px solid #000;
+    border-radius:50%;
+   
+    margin:0px 10px;
+    transition:all 0.5s;
+}
+
+.footers .leftfooter li:hover{
+    transform:translateY(-10px);
+}
+
+.footers a{
+    text-align:center;
+    line-height:50px;
+}
+
+.footers hr{
+    width:50px;
+    border-width:4px;
+    background-color:#fff;
+}
+
+.footers .rightfooter{
+    border:1px solid #000;
+    display:grid;
+    place-items:center;
+}
